@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# file : runmain
+
+#set -x
+LD_LIBRARY_PATH=./:${LD_LIBRARY_PATH}
+export ${LD_LABRARY_PATH}
+
+./main #실행
+
+

@@ -1,0 +1,18 @@
+// 정적 라이브러리를 만드는 방법
+// 1. c소스로 object 파일 만들기
+// gcc add.c -c : 컴파일만 해달라 add.o
+// gcc sub.c -c :                 sub.o
+
+//2. object파일을 묶어서 정적 라이브러리로 빌드하기
+// ar rscv libmymath.a add.o mul.o : 정적라이브러리는 관례적으로 lib로 시작
+
+// objdump add.o -d : obj dump보기
+// objdump libmymath.a -d | less : obj dump보기
+
+// 라이브러리 제작자가 모든 함수의 선언을 제공하기 위해 헤더파일(.h)을 만들어줌
+// mymath.h
+
+// use_static.c 만들기
+
+// 이걸 linking 해주어야 함
+
